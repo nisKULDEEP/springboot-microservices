@@ -1,0 +1,20 @@
+server:
+  port:9000
+
+spring:
+  config:
+    activate:
+      on-profile: "qa"
+
+build:
+  version: "2.0"
+
+accounts:
+  message: "Welcome to Card Microservice - QA"
+  contactDetails:
+    name: "Kajal - QA"
+    email: "kajal.singh@gmail.com"
+    mobile: 88998899889
+  contributors:
+    - "123"
+    - "XYZ"

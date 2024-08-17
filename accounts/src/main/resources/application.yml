@@ -1,0 +1,41 @@
+server:
+  port:8080
+
+spring:
+  application:
+    name:accounts
+  h2:
+    console:
+      enable:true
+  datasource:
+    url: jdbc:h2:mem:accountDB
+    driverClassName: org.h2.Driver
+    username: 'kuldeep'
+    password: ''
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  hibernate:
+    ddl-auto:update
+  show-sql: true
+  config:
+    import:
+      - "application_qa.yml"
+      - "application_prod.yml"
+  profiles:
+    active:
+      - "qa"
+
+
+build:
+  version: "3.0"
+
+
+accounts:
+  message: "Welcome to Account Microservice - Development"
+  contactDetails:
+    name: "Kuldeep Singh"
+    email: "kuldeepnishad.singh@gmail.com"
+    mobile: 7536064444
+  contributors:
+    - "Rahul"
+    - "Nickel"

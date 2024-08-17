@@ -1,0 +1,18 @@
+spring:
+  config:
+    activate:
+      on-profile: "prod"
+
+build:
+  version: "1.0"
+
+
+accounts:
+  message: "Welcome to Account Microservice - Production "
+  contactDetails:
+    name: "Kuldeep Singh"
+    email: "kuldeepnishad.singh@gmail.com"
+    mobile: 7536064444
+  contributors:
+    - "Rahul"
+    - "Nickel"
