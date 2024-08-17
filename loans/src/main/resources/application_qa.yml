@@ -1,15 +1,15 @@
 spring:
   config:
     activate:
-      on-profile: "prod"
+      on-profile: "qa"
 
 build:
-  version: "2.0"
+  version: "1.0"
 
 accounts:
-  message: "Welcome to Card Microservice - Production"
+  message: "Welcome to Card Microservice - QA"
   contactDetails:
-    name: "Kajal - Production"
+    name: "Kajal - QA"
     email: "kajal.singh@gmail.com"
     mobile: 88998899889
   contributors:

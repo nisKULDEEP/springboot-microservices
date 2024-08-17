@@ -9,7 +9,7 @@ build:
 accounts:
   message: "Welcome to Card Microservice - Production"
   contactDetails:
-    name: "Kajal - Production"
+    name: "Kajal - prod"
     email: "kajal.singh@gmail.com"
     mobile: 88998899889
   contributors:

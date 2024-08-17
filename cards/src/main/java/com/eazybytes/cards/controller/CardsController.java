@@ -32,16 +32,15 @@ import org.springframework.web.bind.annotation.*;
         description = "CRUD REST APIs in Bank to CREATE, UPDATE, FETCH AND DELETE card details"
 )
 @RestController
-@RequestMapping(path = "/api", produces = {MediaType.APPLICATION_JSON_VALUE})
+@RequestMapping(path = "/api/card", produces = {MediaType.APPLICATION_JSON_VALUE})
 //@AllArgsConstructor
 @Validated
 public class CardsController {
 
     private ICardsService iCardsService;
 
-//    @Value("${build.version}")
-//    private String buildVersion;
-
+    @Value("${build.version}")
+    private String buildVersion;
 
     private AccountConfigInfo accountConfigInfo;
 
@@ -194,9 +193,9 @@ public class CardsController {
                     )
             )
     })
-    @GetMapping("/card/build-info")
+    @GetMapping("/build-info")
     public ResponseEntity<String> getBuildVersion () {
-        return  ResponseEntity.status(HttpStatus.OK).body("buildVersion.toString()");
+        return  ResponseEntity.status(HttpStatus.OK).body(buildVersion);
     }
 
 
@@ -233,7 +232,7 @@ public class CardsController {
                     )
             )
     })
-    @GetMapping("/card/contact-info")
+    @GetMapping("/contact-info")
     public ResponseEntity<AccountConfigInfo> getContactInfo () {
         return  ResponseEntity.status(HttpStatus.OK).body(accountConfigInfo);
     }
